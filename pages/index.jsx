@@ -46,9 +46,7 @@ const Home = () => {
       </div>
 
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
-        <Fade left>
-          <div className="bg-cover h-294 md:h-600 lg:col-span-7 md:col-span-2 bg-stories-sm lg:bg-stories md:bg-stories-md" />
-        </Fade>
+        <div className="bg-cover h-294 md:h-600 lg:col-span-7 md:col-span-2 bg-stories-sm lg:bg-stories md:bg-stories-md" />
 
         <div className="flex items-center justify-center bg-white lg:col-span-5 md:col-span-4">
           <Fade distance="40px" left>
