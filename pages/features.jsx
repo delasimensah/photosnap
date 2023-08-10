@@ -1,6 +1,5 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import Link from "next/link";
 
 //components
@@ -13,7 +12,7 @@ const features = () => {
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
         <div className="relative flex items-center justify-center row-start-2 bg-black lg:col-span-5 md:col-span-4 md:row-start-1">
           <div className="absolute md:left-0 top-0 md:top-32 left-10 w-40 md:w-1.5 h-1.5 md:bg-gradient-to-b bg-gradient-to-r from-tertiary via-secondary to-primary md:h-72" />
-          <Zoom>
+          <Fade distance="40px" left>
             <div className="py-10 space-y-10 text-white md:py-0 w-80 md:w-96">
               <h1 className="heading"> Features</h1>
 
@@ -23,16 +22,14 @@ const features = () => {
                 share their stories.
               </p>
             </div>
-          </Zoom>
+          </Fade>
         </div>
 
-        <Fade left>
-          <div className="bg-cover h-294 md:h-490 lg:col-span-7 md:col-span-2 bg-hero-sm lg:bg-hero md:bg-hero-md" />
-        </Fade>
+        <div className="bg-cover h-294 md:h-490 lg:col-span-7 md:col-span-2 bg-hero-sm lg:bg-hero md:bg-hero-md" />
       </div>
 
       <div className="grid py-10 md:grid-cols-2 lg:grid-cols-3">
-        <Zoom>
+        <Fade distance="40px" left>
           <Feature>
             <div className="">
               <img src="/responsive.svg" alt="" />
@@ -75,9 +72,9 @@ const features = () => {
               videos, Google Maps, and more.
             </p>
           </Feature>
-        </Zoom>
+        </Fade>
 
-        <Fade left>
+        <Fade distance="40px" left>
           <Feature>
             <div className="">
               <img src="/custom-domain.svg" alt="" />
@@ -122,15 +119,13 @@ const features = () => {
       </div>
 
       <div className="grid px-10 text-white bg-cover md:px-20 md:grid-cols-2 bg-beta-sm md:bg-beta-md lg:bg-beta h-288 md:280">
-        <Zoom>
-          <div className="flex items-center">
-            <h1 className="text-3xl leading-normal tracking-widest uppercase md:w-11/12 lg:w-4/5 lg:text-5xl">
-              We're in Beta. Get your invite today!
-            </h1>
-          </div>
-        </Zoom>
+        <div className="flex items-center">
+          <h1 className="text-3xl leading-normal tracking-widest uppercase md:w-11/12 lg:w-4/5 lg:text-5xl">
+            We're in Beta. Get your invite today!
+          </h1>
+        </div>
 
-        <Fade left>
+        <Fade distance="40px" left>
           <div className="flex space-x-5 md:items-center md:justify-end">
             <Link href="/">
               <a className="tracking-widest text-white uppercase hover:underline">

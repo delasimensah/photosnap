@@ -1,5 +1,4 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
 
@@ -12,8 +11,8 @@ import Gradient from "../components/Gradient";
 const Stories = () => {
   return (
     <Layout>
-      <Zoom>
-        <div className="flex flex-col items-start justify-center px-24 bg-cover h-317 md:h-650 bg-moon-sm md:bg-moon-md lg:bg-moon">
+      <div className="flex flex-col items-start justify-center px-24 bg-cover h-317 md:h-650 bg-moon-sm md:bg-moon-md lg:bg-moon">
+        <Fade distance="40px" left>
           <div className="hidden space-y-6 text-white md:w-1/2 lg:w-2/5 md:block ">
             <h1 className="tracking-widest uppercase lg:text-xl">
               Last month's featured story
@@ -50,10 +49,10 @@ const Stories = () => {
               </svg>
             </div>
           </div>
-        </div>
-      </Zoom>
+        </Fade>
+      </div>
 
-      <Fade left>
+      <Fade distnace="40px" left>
         <div className="p-10 space-y-6 text-white bg-black md:w-1/2 lg:w-2/5 md:hidden">
           <h1 className="tracking-widest uppercase">
             Last month's featured story

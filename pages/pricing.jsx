@@ -1,6 +1,5 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import Link from "next/link";
 
 import Layout from "../components/Layout";
@@ -11,15 +10,13 @@ const Pricing = () => {
   const prices = [
     {
       plan: "Basic",
-      info:
-        "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+      info: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
       monthly: "$19.00",
       yearly: "$190.00",
     },
     {
       plan: "Pro",
-      info:
-        "More advanced features available. Recommended for photography veterans and professionals.",
+      info: "More advanced features available. Recommended for photography veterans and professionals.",
       monthly: "$39.00",
       yearly: "$390.00",
       active: true,
@@ -27,8 +24,7 @@ const Pricing = () => {
 
     {
       plan: "Business",
-      info:
-        "Additional features available such as more detailed metrics. Recommended for business owners.",
+      info: "Additional features available such as more detailed metrics. Recommended for business owners.",
       monthly: "$99.00",
       yearly: "$990.00",
     },
@@ -106,7 +102,7 @@ const Pricing = () => {
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
         <div className="relative flex items-center justify-center row-start-2 bg-black lg:col-span-5 md:col-span-4 md:row-start-1">
           <div className="absolute md:left-0 top-0 md:top-32 left-10 w-40 md:w-1.5 h-1.5 md:bg-gradient-to-b bg-gradient-to-r from-tertiary via-secondary to-primary md:h-72" />
-          <Zoom>
+          <Fade distance="40px" left>
             <div className="py-10 space-y-10 text-white md:py-0 w-80 md:w-96">
               <h1 className="heading">Pricing</h1>
 
@@ -116,15 +112,13 @@ const Pricing = () => {
                 your photos.
               </p>
             </div>
-          </Zoom>
+          </Fade>
         </div>
 
-        <Fade left>
-          <div className="bg-cover h-294 md:h-490 lg:col-span-7 md:col-span-2 bg-hero2-sm lg:bg-hero2 md:bg-hero2-md" />
-        </Fade>
+        <div className="bg-cover h-294 md:h-490 lg:col-span-7 md:col-span-2 bg-hero2-sm lg:bg-hero2 md:bg-hero2-md" />
       </div>
 
-      <Zoom>
+      <Fade>
         <div className="my-20 md:my-32">
           <div className="flex justify-center">
             <div className="flex items-center space-x-6">
@@ -152,9 +146,9 @@ const Pricing = () => {
             })}
           </div>
         </div>
-      </Zoom>
+      </Fade>
 
-      <Fade left>
+      <Fade distance="40px" left>
         <div className="flex flex-col items-center pb-20 space-y-8">
           <h1 className="hidden text-4xl font-bold tracking-wider uppercase md:block">
             Compare
@@ -211,15 +205,13 @@ const Pricing = () => {
       </Fade>
 
       <div className="grid px-10 text-white bg-cover md:px-20 md:grid-cols-2 bg-beta-sm md:bg-beta-md lg:bg-beta h-288 md:280">
-        <Zoom>
-          <div className="flex items-center">
-            <h1 className="text-3xl leading-normal tracking-widest uppercase md:w-11/12 lg:w-4/5 lg:text-5xl">
-              We're in Beta. Get your invite today!
-            </h1>
-          </div>
-        </Zoom>
+        <div className="flex items-center">
+          <h1 className="text-3xl leading-normal tracking-widest uppercase md:w-11/12 lg:w-4/5 lg:text-5xl">
+            We're in Beta. Get your invite today!
+          </h1>
+        </div>
 
-        <Fade left>
+        <Fade distance="40px" left>
           <div className="flex space-x-5 md:items-center md:justify-end">
             <Link href="/">
               <a className="tracking-widest text-white uppercase hover:underline">

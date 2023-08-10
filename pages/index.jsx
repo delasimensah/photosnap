@@ -1,5 +1,4 @@
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import Link from "next/link";
 
 //components
@@ -15,7 +14,8 @@ const Home = () => {
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
         <div className="relative flex items-center justify-center row-start-2 bg-black lg:col-span-5 md:col-span-4 md:row-start-1">
           <div className="absolute md:left-0 top-0 md:top-52 left-10 w-40 md:w-1.5 h-1.5 md:bg-gradient-to-b bg-gradient-to-r from-tertiary via-secondary to-primary md:h-72" />
-          <Zoom>
+
+          <Fade distance="40px" left>
             <div className="py-10 space-y-10 text-white md:py-0 w-80 md:w-96">
               <h1 className="heading">create and share your photo stories.</h1>
 
@@ -39,12 +39,10 @@ const Home = () => {
                 </svg>
               </div>
             </div>
-          </Zoom>
+          </Fade>
         </div>
 
-        <Fade left>
-          <div className="bg-cover h-294 md:h-650 lg:col-span-7 md:col-span-2 bg-create-sm lg:bg-create md:bg-create-md" />
-        </Fade>
+        <div className="bg-cover h-294 md:h-650 lg:col-span-7 md:col-span-2 bg-create-sm lg:bg-create md:bg-create-md" />
       </div>
 
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
@@ -53,7 +51,7 @@ const Home = () => {
         </Fade>
 
         <div className="flex items-center justify-center bg-white lg:col-span-5 md:col-span-4">
-          <Zoom>
+          <Fade distance="40px" left>
             <div className="py-10 space-y-10 text-black md:py-0 w-80 md:w-96">
               <h1 className="heading w-72">Beautiful stories every time</h1>
 
@@ -73,13 +71,13 @@ const Home = () => {
                 <img src="/arrow.svg" alt="" />
               </div>
             </div>
-          </Zoom>
+          </Fade>
         </div>
       </div>
 
       <div className="grid lg:grid-cols-12 md:grid-rows-1 md:grid-cols-6">
         <div className="flex items-center justify-center row-start-2 bg-white lg:col-span-5 md:col-span-4 md:row-start-1">
-          <Zoom>
+          <Fade distance="40px" left>
             <div className="py-10 space-y-10 text-black md:py-0 w-80 md:w-96">
               <h1 className="heading ">Designed for everyone</h1>
 
@@ -99,12 +97,10 @@ const Home = () => {
                 <img src="/arrow.svg" alt="" />
               </div>
             </div>
-          </Zoom>
+          </Fade>
         </div>
 
-        <Fade left>
-          <div className="bg-cover h-294 md:h-600 lg:col-span-7 md:col-span-2 bg-designed-sm lg:bg-designed md:bg-designed-md" />
-        </Fade>
+        <div className="bg-cover h-294 md:h-600 lg:col-span-7 md:col-span-2 bg-designed-sm lg:bg-designed md:bg-designed-md" />
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4">
@@ -137,7 +133,7 @@ const Home = () => {
         </StoryCard>
       </div>
 
-      <Zoom>
+      <Fade distance="40px" left>
         <div className="grid py-10 lg:grid-cols-3">
           <Feature>
             <div className="">
@@ -182,7 +178,7 @@ const Home = () => {
             </p>
           </Feature>
         </div>
-      </Zoom>
+      </Fade>
     </Layout>
   );
 };
